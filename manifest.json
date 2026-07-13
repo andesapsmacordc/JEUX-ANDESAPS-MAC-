@@ -1,0 +1,17 @@
+{
+  "name": "ANDESAPS HERO",
+  "short_name": "ANDESAPS HERO",
+  "description": "Safari ya Amani - Mchezo rasmi wa simulizi wa ANDESAPS-MAC",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0b5d2a",
+  "theme_color": "#0b5d2a",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

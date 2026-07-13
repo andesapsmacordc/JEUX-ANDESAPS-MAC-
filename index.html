@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>ANDESAPS HEROES - Safari ya Amani</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <audio id="backgroundMusic" loop>
+    <source src="music/hero-theme.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+🎵 MUSIC ON
+</button>
+<div id="game">
+
+<!-- MENU YA MWANZO -->
+<div id="intro">
+
+<div id="screen1" class="screen">
+
+<h1>🇨🇩</h1>
+
+<h2>JAMHURI YA KIDEMOKRASIA YA KONGO</h2>
+
+</div>
+
+<div id="screen2" class="screen">
+
+<h1>ANDESAPS-MAC</h1>
+
+<h3>Presents</h3>
+
+</div>
+
+<div id="screen3" class="screen">
+
+<h1>ANDESAPS HEROES</h1>
+
+<h2>SAFARI YA AMANI</h2>
+
+</div>
+
+<div id="screen4" class="screen">
+
+<h2>Inspired by</h2>
+
+<h1>Muganda Balungwe Yousouf Ali</h1>
+
+<p>Founder of ANDESAPS-MAC</p>
+
+</div>
+
+</div>
+<div id="menu">
+<img src="images/logo.png" id="gameLogo">
+
+<h1>ANDESAPS HEROES</h1>
+
+<h3>Safari ya Amani</h3>
+
+<p>
+Mchezo rasmi wa simulizi kuhusu
+ANDESAPS-MAC
+</p>
+
+<div class="menu-box">
+
+<button onclick="startStory()">
+<span id="startText">▶️ ANZA SAFARI</span>
+</button>
+<br><br>
+
+<button onclick="showBooks()">
+<span id="booksText">📚 VITABU VYA SAFARI</span>
+</button>
+
+<button onclick="resetGame()">
+<span id="resetText">🔄 ANZA UPYA</span>
+</button>
+
+<br><br>
+
+<button onclick="showMedals()">
+<span id="medalsText">🏆 MEDALI ZANGU</span>
+</button>
+<br><br>
+
+<button onclick="showLanguage()">
+🌐 LUGHA
+</button>
+</div>
+
+<p class="founder">
+Mwanzilishi:
+<br>
+Muganda Balungwe Yousouf Ali
+</p>
+</div>
+<!-- ========================= -->
+<!-- LUGHA -->
+<!-- ========================= -->
+
+<div id="language" style="display:none;">
+
+<h2>🌐 CHAGUA LUGHA</h2>
+
+<button onclick="changeLanguage('sw')">
+🇨🇩 Kiswahili
+</button>
+
+<br><br>
+
+<button onclick="changeLanguage('fr')">
+🇫🇷 Français
+</button>
+
+<br><br>
+
+<button onclick="changeLanguage('en')">
+🇬🇧 English
+</button>
+
+<br><br>
+
+<button onclick="changeLanguage('ar')">
+🇸🇦 العربية
+</button>
+
+<br><br>
+
+<button onclick="changeLanguage('ur')">
+🇵🇰 اردو
+</button>
+
+<br><br>
+
+<button onclick="closeLanguage()">
+⬅ RUDI MENU
+</button>
+
+</div>
+<!-- ENEO LA HADITHI -->
+
+<div id="story" style="display:none;">
+
+<h2></h2>
+<div id="progressContainer">
+
+<div id="progressBar"></div>
+
+</div>
+
+<p id="progressText">0%</p>
+<div id="storyText"></div>
+
+<br>
+
+<div class="buttons">
+
+<button onclick="goMenu()">
+🏠 MENU
+</button>
+
+<button onclick="previousChapter()">
+⬅ RETOUR
+</button>
+
+<button onclick="nextChapter()">
+➡ ENDELEA
+</button>
+
+</div>
+</div>
+</div>
+<!-- ENEO LA VITABU -->
+<div id="books" style="display:none;">
+<h2>📚 CHAGUA KITABU</h2>
+
+<button onclick="openBook(0)">
+📘 BOOK 1
+</button>
+
+<br><br>
+
+<button onclick="checkBook2()">
+📗 BOOK 2
+</button>
+<br><br>
+
+<button onclick="lockBook()">
+🔒 BOOK 3
+</button>
+
+<br><br>
+
+<button onclick="openBook()">
+🔒 BOOK 4
+</button>
+
+<br><br>
+
+<button onclick="openBook()">
+🔒 BOOK 5
+</button>
+<br><br>
+
+<br><br>
+<button onclick="openBook(5)">
+📖 BOOK 6
+</button>
+<br><br>
+
+<button onclick="openBook(6)">
+📖 BOOK 7
+</button>
+<br><br>
+
+<button onclick="openBook(7)">
+📖 BOOK 8
+</button>
+<br><br>
+
+<button onclick="openBook(8)">
+📖 BOOK 9
+</button>
+<br><br>
+
+<button onclick="openBook(9)">
+📖 BOOK 10
+</button>
+<br><br>
+
+<button onclick="openBook(10)">
+📖 BOOK 11
+</button>
+<br><br>
+
+<button onclick="openBook(11)">
+📖 BOOK 12
+</button>
+
+<br><br>
+
+<button onclick="openBook(12)">
+📖 BOOK 13
+</button>
+
+<br><br>
+
+<button onclick="openBook(13)">
+📖 BOOK 14
+</button>
+
+<br><br>
+
+<button onclick="openBook(14)">
+📖 BOOK 15
+</button>
+<br><br>
+<button onclick="openBook(15)">
+📖 BOOK 16
+</button>
+
+<br><br>
+<button onclick="openBook(16)">
+📖 BOOK 17
+</button>
+
+<br><br>
+<button onclick="openBook(17)">
+📖 BOOK 18
+</button>
+
+<br><br>
+<button onclick="openBook(18)">
+📖 BOOK 19
+</button>
+
+<br><br>
+<button onclick="openBook(19)">
+📖 BOOK 20
+</button>
+
+<br><br>
+<button onclick="openBook(20)">
+📖 BOOK 21
+</button>
+
+<br><br>
+<button onclick="openBook(21)">
+📖 BOOK 22
+</button>
+
+<br><br>
+<button onclick="openBook(22)">
+📖 BOOK 23
+</button>
+
+<br><br>
+<button onclick="openBook(23)">
+📖 BOOK 24
+</button>
+
+<br><br>
+<button onclick="openBook(24)">
+📖 BOOK 25
+</button>
+
+<br><br>
+<button onclick="openBook(25)">
+📖 BOOK 26
+</button>
+
+<br><br>
+<button onclick="openBook(26)">
+📖 BOOK 27
+</button>
+
+<br><br>
+<button onclick="openBook(27)">
+📖 BOOK 28
+</button>
+
+<br><br>
+<button onclick="openBook(28)">
+📖 BOOK 29
+</button>
+
+<br><br>
+<button onclick="openBook(29)">
+📖 BOOK 30
+</button>
+<button onclick="showProfile()">
+👤 PROFIL YA MCHEZAJI
+</button>
+
+<br><br>
+
+<button onclick="showHeritage()">
+🌍 URITHI WA ANDESAPS HERO
+</button>
+
+<br><br>
+
+<button onclick="backToMenu()">
+⬅ RUDI MENU
+</button>
+
+<br><br>
+
+</div>
+
+<!-- ========================= -->
+<!-- PROFIL YA MCHEZAJI -->
+<!-- ========================= -->
+
+<div id="profile" style="display:none;">
+
+<h2>👤 PROFIL YA MCHEZAJI</h2>
+
+<p><strong>📖 Sura:</strong> <span id="profileChapter">1</span></p>
+
+<p><strong>⭐ Level:</strong> <span id="profileLevel">1</span></p>
+
+<p><strong>⚡ XP:</strong> <span id="profileXP">0</span></p>
+
+<p><strong>📚 Book:</strong> <span id="profileBook">1</span></p>
+
+<p><strong>🏅 Medali:</strong> <span id="profileMedals">0</span></p>
+
+<p><strong>📈 Maendeleo:</strong> <span id="profilePercent">0%</span></p>
+
+<br>
+
+<button onclick="closeProfile()">
+⬅ RUDI MENU
+</button>
+
+</div>
+
+<!-- ========================= -->
+<!-- URITHI WA ANDESAPS HERO -->
+<!-- ========================= -->
+
+<div id="heritage" style="display:none;">
+
+<h2>🌍 URITHI WA ANDESAPS HERO</h2>
+
+<div id="heritageContent"></div>
+
+<br>
+
+<button onclick="closeHeritage()">
+⬅ RUDI MENU
+</button>
+
+</div>
+<!-- ========================= -->
+<!-- MEDALI ZANGU -->
+<!-- ========================= -->
+
+<div id="medals" style="display:none;">
+
+<h2>🏆 MEDALI ZANGU</h2>
+
+<div id="medalList"></div>
+
+<br>
+
+<button onclick="backToMenu()">
+⬅ RUDI MENU
+</button>
+
+</div>
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+© 2026 ANDESAPS HEROES<br>
+Association Nationale pour le Développement Économique,
+Social, Éducatif, Agricole, Paix et Solidarité (ANDESAPS-MAC)
+</p>
+
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("service-worker.js");
+}
+</script>
+</body>
+
+</html>
